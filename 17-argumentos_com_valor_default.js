@@ -1,3 +1,5 @@
+
+//pré determinar um valor para uma função no caso aqui, n = 2
 function repetirFrase(string, n=2){
 for(let x = 1; x<=n; x++ ){
     console.log(string +" "+ x);
