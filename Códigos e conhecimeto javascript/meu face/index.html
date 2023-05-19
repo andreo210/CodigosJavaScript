@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detecção Facial</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <script defer src="js/face-api.min.js"></script>
+    <script defer src="js/main.js"></script>
+
+
+    <style>
+        
+
+    </style>
+</head>
+<body>
+    <!-- carrega a web cam na pagina , autoplay ja carrega a pagina e muted deixa mudo-->
+    <video autoplay id="cam" width="720" height="560" muted></video>
+
+    <canvas id="canvas" width="400" height="300" style="display: none;"></canvas>
+
+    <!-- cria um input de texto hidden para guardar o texto base64 da imagen-->
+    <input id="imageCanvas" name="imageCanvas" type="text" hidden/>  
+
+  
+</body>
+</html>
