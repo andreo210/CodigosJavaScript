@@ -1,0 +1,79 @@
+----------------------------------------------------------comentario--------------------------------------------------
+// comentário de uma linha
+
+/* isto é um comentário longo
+   de múltiplas linhas.
+ */
+
+/* Você não pode, porém, /* aninhar comentários *
+
+---------------------------------------------------------Declarações-------------------------------------------------------------
+
+var =>  Declara uma variável, opcionalmente, inicializando-a com um valor.
+let =>  Declara uma variável local de escopo do bloco, opcionalmente, inicializando-a com um valor.
+const =>  Declara uma constante de escopo de bloco, apenas de leitura.
+
+--------------------------------------------------------Declarando variáveis---------------------------------------------------
+
+-Você pode declarar uma variável de três formas:
+
+var x=42 =>  Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais
+x=42   =>    Isso declara uma variável global. Essa declaração gera um aviso de advertência no JavaScript
+let y=13  =>  Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco.
+
+-Uma variável declarada usando a declaração var ou let sem especificar o valor inicial tem o valor  undefined
+
+
+-------------------------------------------------------Classificando variáveis----------------------------------------------------------------------------
+
+-Uma variável declarada usando a declaração var ou let sem especificar o valor inicial tem o valor  undefined
+var a;
+console.log("O valor de a é " + a); // saída "O valor de a é undefined"
+
+-Você pode usar undefined para determinar se uma variável tem um valor. No código a seguir, não é atribuído um valor de entrada na variável e a declaração if será avaliada como verdadeira (true)
+var input;
+	if(input === undefined){//nesta linha undefined sera tratada como um variavel verdadeira
+  	facaIsto();
+	} else {
+ 	 facaAquilo();
+	}
+
+-O valor undefined converte-se para NaN quando usado no contexto numérico.
+	var a;
+	a + 2;  // Avaliado como NaN
+
+-Quando você avalia uma variável nula, o valor nulo se comporta como 0 em contextos numéricos e como falso em contextos booleanos. Por exemplo:
+	var n = null;
+	console.log(n * 32); // a saída para o console será 0.
+
+
+----------------------------------------------------------------Tipos de Dados --------------------------------------------------------------------------------------------------------------
+
+==>Number 
+console.log(5);
+console.log(12,3);
+console.log(-13);
+console.log(typeof 12.5);
+
+==>Operação Artmeticas
+console.log(5+5);
+console.log(9-5);
+console.log(4*3);
+console.log(12/4);
+console.log(12%4);
+
+==> Tipos especiais de number
+console.log(typeof infinity);
+console.log(typeof -infinity);
+console.log(typeof nan);
+console.log(5 + "tres");
+
+==>string
+console.log("hello word");
+console.log("meu nome é Andre");
+
+==>template literais
+console.log(`a soma de 2 + 2 é : ${2+2}`); //com acento
+
+
+
