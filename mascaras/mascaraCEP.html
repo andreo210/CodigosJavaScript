@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascara CEP</title>
+</head>
+<body>
+
+    <!-- input text da mascara-->
+    <input type="text" maxlength="9" onkeyup="handleZipCode(event)" />
+
+    <script>
+
+        const handleZipCode = (event) => {//quando ele digita ativa o método
+        let input = event.target
+        input.value = zipCodeMask(input.value) //vai dando o valor do input
+        }
+
+        const zipCodeMask = (value) => {
+        if (!value) return ""
+        value = value.replace(/\D/g,'')
+        value = value.replace(/(\d{5})(\d)/,'$1-$2')
+        return value
+        }
+    </script>
+    
+</body>
+</html>
