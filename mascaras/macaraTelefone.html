@@ -9,10 +9,13 @@
 <body>
 
     <!-- input text da mascara-->
-    <input type="tel" maxlength="15" onkeyup="manipuladorTelefone(event)" />
+    <input type="tel" id="celular" maxlength="15" onkeyup="manipuladorTelefone(event)" />
+    <button onclick="tirarCaractereTel()"> limpar campo</button>
 
     <script>
-
+            //################################################################  Mascara Telefone #############################################################################
+            
+            
             const manipuladorTelefone = (event) => {
             let input = event.target
             input.value = mascaraTelefone(input.value)
@@ -24,6 +27,14 @@
             value = value.replace(/(\d{2})(\d)/,"($1) $2")
             value = value.replace(/(\d)(\d{4})$/,"$1-$2")
             return value
+            }
+
+            function tirarCaractereTel() {
+                var campo = document.getElementById('celular');
+                if (typeof (campo.value) != undefined && campo.value != '') {
+                    var tel = campo.value.replace('(', '').replace(')', '').replace(' ', '').replace('-', '');//tira todo caracter do campo celular
+                    campo.value = tel
+                }
             }
     </script>
     

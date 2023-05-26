@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascara CEP</title>
+</head>
+<body>
+
+    <!-- input text da mascara-->
+    <input type="tel" id="cpf" maxlength="14" onkeyup="manipuladorTelefone(event)" />
+    <button onclick="tirarCaractereCPF()"> tirar caracter</button>
+
+    <script>
+            //################################################################  Mascara CPF #############################################################################
+                var cpf = document.getElementById('cpf');
+                cpf.oninput = validarMascaraAoDigitar;
+                cpf.onpaste = validarMascaraAoColar;
+
+
+                function validarMascaraAoDigitar(e) {
+                    if (e.target != null)
+                        CPF = e.target
+                    else
+                        cpf = e;
+                    CPFComMascara = aplicarMascara(CPF.value);
+                    return CPF.value = CPFComMascara;
+                }
+
+                function validarMascaraAoColar(CPF) {
+                    if (e.target != null)
+                        CPF = e.target
+                    else
+                        cpf = e;
+                    CPFComMascara = aplicarMascara(CPF.value);
+                    return CPF.value = CPFComMascara;
+                }
+
+
+                function aplicarMascara(CPF) {
+                    CPFComMascara = CPF.replace(/\D/g, '')
+                        .replace(/(\d{3})(\d)/, '$1.$2')
+                        .replace(/(\d{3})(\d)/, '$1.$2')
+                        .replace(/(\d{3})(\d)/, '$1-$2')
+                        .replace(/(\d{3})(\d)/, '$2')
+
+                    return CPFComMascara;
+                }
+
+                function tirarCaractereCPF() {
+                    var campo = document.getElementById('cpf');
+                    if (typeof (campo.value) != undefined && campo.value != '') {
+                        var Cpf = campo.value.replace('.', '').replace('.', '').replace('-', '');//tira todo caracter do campo cpf
+                        campo.value = Cpf
+                    }
+                }
+    </script>
+    
+</body>
+</html>
