@@ -1,6 +1,6 @@
 //uma forma da função receber qualquer parametro
-//O Operador Rest vbai virar um array
-let num1 = 1;
+//O Operador Rest vai virar um array
+let num1 = 4;
 let num2 = 2;
 let num3 = 3;
 
