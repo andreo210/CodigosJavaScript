@@ -1,3 +1,5 @@
+//são constantes de um objeto
+
 class Cachorro{
     constructor(raca,cor){
         this.raca = raca;
