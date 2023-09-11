@@ -1,6 +1,8 @@
 var nomeBootInputText = window.document.getElementById("nomeBoot");
 var estadoSelect = document.getElementById("estadoSelectBoot");
 
+
+
 function selecionarCampoInputText() {
     console.log("typeof: " + typeof nomeBootInputText);
     console.log("object call: " + Object.prototype.toString.call(nomeBootInputText));
